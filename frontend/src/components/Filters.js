@@ -24,6 +24,7 @@ const Filters = () => {
   const categories = getUniqueValues(all_product, "category");
   const companies = getUniqueValues(all_product, "company");
   const colors = getUniqueValues(all_product, "colors");
+  // console.log(colors);
   return (
     <Wrapper>
       <div className="content">

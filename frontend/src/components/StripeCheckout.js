@@ -28,22 +28,22 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const createPaymentIntent = async () => {
-    try {
-      const { data } = await axios.post(
-        "/.netlify/functions/create-payment-intent",
-        JSON.stringify({ cart, shippingfee, total_ammount })
-      );
-      setClientSecret(data.clientSecret);
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
+  // const createPaymentIntent = async () => {
+  //   try {
+  //     const { data } = await axios.post(
+  //       "/.netlify/functions/create-payment-intent",
+  //       JSON.stringify({ cart, shippingfee, total_ammount })
+  //     );
+  //     setClientSecret(data.clientSecret);
+  //   } catch (error) {
+  //     console.log(error.response);
+  //   }
+  // };
 
-  useEffect(() => {
-    createPaymentIntent();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   createPaymentIntent();
+  //   // eslint-disable-next-line
+  // }, []);
 
   const handleChange = async (event) => {
     setDisabled(event.empty);

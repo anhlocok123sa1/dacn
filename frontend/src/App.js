@@ -12,6 +12,7 @@ import {
   Checkout,
   Private,
 } from "./pages";
+
 function App() {
   return <Router>
     <Navbar/>

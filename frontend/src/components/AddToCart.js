@@ -31,6 +31,7 @@ const AddToCart = ({ product }) => {
       return tempAmount;
     });
   };
+  console.log(typeof(colors));
   return (
     <Wrapper>
       <div className="colors">

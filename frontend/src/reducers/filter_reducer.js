@@ -78,8 +78,9 @@ const filter_reducer = (state, action) => {
       );
     }
     if(color!=='all'){
+      
       tempProducts = tempProducts.filter(
-        (product) => product.colors.find((c)=>c===color)
+        (product) => product.colors.includes(color)
       );
     }
     tempProducts = tempProducts.filter(product=> product.price <=price);
